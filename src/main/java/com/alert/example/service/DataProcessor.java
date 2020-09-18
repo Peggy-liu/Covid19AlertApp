@@ -5,8 +5,6 @@ import java.util.Arrays;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.alert.example.exception.StateNotFoundException;
-import com.alert.example.model.Covid19DataModel;
 import com.alert.example.model.RegionalAlertData;
 import com.alert.example.model.RegionalData;
 import com.alert.example.model.SummaryData;
@@ -43,8 +41,7 @@ public class DataProcessor {
 
 	public SummaryData getSummaryData() {
 
-		SummaryData result = service.getSummary();
-		
-		return result;
+		return service.getSummary();
+
 	}
 }

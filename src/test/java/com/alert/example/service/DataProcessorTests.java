@@ -17,7 +17,7 @@ import com.alert.example.model.RegionalAlertData;
 import com.alert.example.model.RegionalData;
 import com.alert.example.model.SummaryData;
 
-public class DataProcessorTests {
+class DataProcessorTests {
 
 	
 	@InjectMocks
@@ -32,7 +32,7 @@ public class DataProcessorTests {
 	}
 	@Test
 	@DisplayName("When the total cases are less than 1000")
-	public void getRegionalAlertDataTest1() {
+	public void getRegionalAlertDataTest1() {   //NOSONAR
 		RegionalData data = new RegionalData();
 		data.setTotalConfirmed(100);
 		Mockito.when(service.getRegionalData(ArgumentMatchers.anyString())).thenReturn(data);
@@ -49,7 +49,7 @@ public class DataProcessorTests {
 	
 	@Test
 	@DisplayName("When the total cases are >1000 and <10000")
-	public void getRegionalAlertDataTest2() {
+	 void getRegionalAlertDataTest2() {
 		RegionalData data = new RegionalData();
 		data.setTotalConfirmed(5000);
 		Mockito.when(service.getRegionalData(ArgumentMatchers.anyString())).thenReturn(data);
@@ -66,7 +66,7 @@ public class DataProcessorTests {
 	
 	@Test
 	@DisplayName("When the total cases are more than 10000")
-	public void getRegionalAlertDataTest3() {
+	 void getRegionalAlertDataTest3() {
 		RegionalData data = new RegionalData();
 		data.setTotalConfirmed(20000);
 		Mockito.when(service.getRegionalData(ArgumentMatchers.anyString())).thenReturn(data);
@@ -81,7 +81,7 @@ public class DataProcessorTests {
 	}
 	@Test
 	@DisplayName("get summary data test")
-	public void getSummaryDataTest() {
+	 void getSummaryDataTest() {
 		SummaryData data = new SummaryData();
 		data.setConfirmedButLocationUnidentified(2);
 		data.setConfirmedCasesForeign(5);

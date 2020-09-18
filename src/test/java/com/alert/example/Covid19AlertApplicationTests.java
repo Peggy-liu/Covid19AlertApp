@@ -7,7 +7,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 class Covid19AlertApplicationTests {
 
 	@Test
-	void contextLoads() {
+	void contextLoads() {   //NOSONAR
 	}
 
 }

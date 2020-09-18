@@ -25,7 +25,7 @@ import com.alert.example.model.SummaryData;
 
 
 
-public class Covid19APIServiceTest {
+ class Covid19APIServiceTest {
 
 	@InjectMocks
 	private Covid19APIService service;
@@ -41,7 +41,7 @@ public class Covid19APIServiceTest {
 
 	@Test
 	@DisplayName("when state name is found")
-	public void getRegionalDataTest1() {
+	 void getRegionalDataTest1() {
 		Covid19DataModel apidata = new Covid19DataModel();
 		AlertData alert = new AlertData();
 		RegionalData region = new RegionalData();
@@ -59,7 +59,7 @@ public class Covid19APIServiceTest {
 
 	@Test
 	@DisplayName("when state name is not found, throw exception")
-	public void getRegionalDataTest2() {
+	 void getRegionalDataTest2() {
 		Covid19DataModel apidata = new Covid19DataModel();
 		AlertData alert = new AlertData();
 		RegionalData region = new RegionalData();
@@ -75,7 +75,7 @@ public class Covid19APIServiceTest {
 	}
 
 	@Test
-	public void getSummaryTest() {
+	 void getSummaryTest() {
 		Covid19DataModel apidata = new Covid19DataModel();
 		AlertData alert = new AlertData();
 

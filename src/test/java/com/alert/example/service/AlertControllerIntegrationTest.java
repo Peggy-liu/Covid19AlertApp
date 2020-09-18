@@ -15,7 +15,7 @@ import org.springframework.test.web.servlet.MockMvc;
 
 @SpringBootTest
 @AutoConfigureMockMvc
-public class AlertControllerIntegrationTest {
+ class AlertControllerIntegrationTest {
 
 	@Autowired
 	MockMvc mvc;
@@ -27,7 +27,7 @@ public class AlertControllerIntegrationTest {
 	 * @throws Exception
 	 */
 	@Test
-	public void getRegionalAlertTest() throws Exception {
+	 void getRegionalAlertTest() throws Exception {
 
 		mvc.perform(get("/india/delhi")).andExpect(status().isOk())
 				.andExpect(content().contentType(MediaType.APPLICATION_JSON))

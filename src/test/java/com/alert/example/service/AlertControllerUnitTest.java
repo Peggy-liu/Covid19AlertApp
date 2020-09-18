@@ -1,8 +1,11 @@
 package com.alert.example.service;
 
 import static org.hamcrest.CoreMatchers.hasItem;
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
+
 import java.util.Arrays;
 
 import org.junit.jupiter.api.Test;
@@ -13,8 +16,6 @@ import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
-import org.springframework.test.web.servlet.RequestBuilder;
-import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 
 import com.alert.example.controller.AlertController;
 import com.alert.example.model.RegionalAlertData;
@@ -29,7 +30,7 @@ import com.alert.example.model.RegionalAlertData;
  *
  */
 @WebMvcTest
-public class AlertControllerUnitTest {
+ class AlertControllerUnitTest {
 
 	@Autowired
 	private AlertController controller;
@@ -41,7 +42,7 @@ public class AlertControllerUnitTest {
 	private DataProcessor processor;
 
 	@Test
-	public void getRegionalAlertTest() throws Exception {
+	 void getRegionalAlertTest() throws Exception {
 		RegionalAlertData data = new RegionalAlertData();
 		data.setAlert("GREEN");
 		data.setMeasurements(Arrays.asList("everything is normal!"));
